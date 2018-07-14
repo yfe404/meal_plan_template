@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Jumbotron Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Hello, world!</h1>
+          <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        </div>
+      </div>
+
+      <div class="container">
+
+	<div class="row">
+	  <div class="col-xs-4">
+	    <img  src="{{ url_for('static', filename='img/how-many-grams-of-protein-should-you-eat-meme.jpg', _external=True) }}" alt="" width="100%"/>
+	  </div>
+	  <div class="col-xs-8">
+	    Ingredients
+	    <div class="row">
+	      <div class="col-xs-4">
+		<ul>
+		  <li>Ingredient 1</li>
+		</ul>
+	      </div>
+	      <div class="col-xs-4">
+		<ul>
+		  <li>Ingredient 2</li>
+		</ul>
+	      </div>
+	    </div>
+	  </div>
+
+	</div>
+	<div class="row">
+	  <div class="col-xs-4">
+
+	    Nutrition
+	    <table class="table">
+	      <tbody>
+		<tr>
+		  <td>Calories</td>
+		  <td>500kcal</td>
+		<tr>
+		<tr>
+		  <td>Proteines</td>
+		  <td>40g</td>
+		<tr>
+		<tr>
+		  <td>Glucides</td>
+		  <td>15g</td>
+		<tr>
+		<tr>
+		  <td>Lipides</td>
+		  <td>10g</td>
+		<tr>
+	      </tbody>
+	    </table>
+	  </div>
+	  <div class="col-xs-8">
+	    Preparation
+
+	    <ol>
+	      <li>etape 1</li>
+	      <li>etape 2</li>
+	      <li>etape 3</li>
+	    </ol>
+	  </div>
+	</div>
+
+    </main>
+
+    <footer class="container">
+      <p>&copy; Company 2017-2018</p>
+    </footer>
+
+  </body>
+</html>

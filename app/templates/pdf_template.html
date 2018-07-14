@@ -37,16 +37,24 @@
 	    <img  src="{{ url_for('static', filename='img/how-many-grams-of-protein-should-you-eat-meme.jpg', _external=True) }}" alt="" width="100%"/>
 	  </div>
 	  <div class="col-xs-8">
-	    Ingredients
+	    <h3>Ingredients</h3>
 	    <div class="row">
 	      <div class="col-xs-4">
 		<ul>
-		  <li>Ingredient 1</li>
+		  {% for ingredient in data['ingredients'] %}
+		  {% if loop.index is not divisibleby 2 %}
+		  <li>{{ ingredient.quantity }}{% if ingredient.unit in ['g', 'ml'] %}{{ ingredient.unit}} {% endif %} {{ ingredient.name }}</li>
+		  {% endif %}
+		  {% endfor %}
 		</ul>
 	      </div>
 	      <div class="col-xs-4">
 		<ul>
-		  <li>Ingredient 2</li>
+		  {% for ingredient in data['ingredients'] %}
+		  {% if loop.index is divisibleby 2 %}
+		  <li>{{ ingredient.quantity }}{% if ingredient.unit in ['g', 'ml'] %}{{ ingredient.unit}} {% endif %} {{ ingredient.name }}</li>
+		  {% endif %}
+		  {% endfor %}
 		</ul>
 	      </div>
 	    </div>
@@ -56,35 +64,35 @@
 	<div class="row">
 	  <div class="col-xs-4">
 
-	    Nutrition
+	    <h3>Nutrition</h3>
 	    <table class="table">
 	      <tbody>
 		<tr>
 		  <td>Calories</td>
-		  <td>500kcal</td>
+		  <td>{{ data['calories'] }} kcal</td>
 		<tr>
 		<tr>
 		  <td>Proteines</td>
-		  <td>40g</td>
+		  <td>{{ data['proteins'] }}g</td>
 		<tr>
 		<tr>
 		  <td>Glucides</td>
-		  <td>15g</td>
+		  <td>{{ data['carbohydrates'] }}g</td>
 		<tr>
 		<tr>
 		  <td>Lipides</td>
-		  <td>10g</td>
+		  <td>{{ data['fats'] }}g</td>
 		<tr>
 	      </tbody>
 	    </table>
 	  </div>
 	  <div class="col-xs-8">
-	    Preparation
+	    <h3>Preparation</h3> 
 
 	    <ol>
-	      <li>etape 1</li>
-	      <li>etape 2</li>
-	      <li>etape 3</li>
+	      {% for step in data['steps'] %}
+	      <li>{{ step }}</li>
+	      {% endfor %}
 	    </ol>
 	  </div>
 	</div>

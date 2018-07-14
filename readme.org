@@ -5,6 +5,12 @@
 I'm also using Flask to trigger the PDF generation via http to integrate it onto my website.
 
 
+#+CAPTION: salad
+#+NAME:   fig:salad
+[[./doc/img/salad.jpg]]
+
+
+
 ** Usage 
 
 1. Run the Flask app 

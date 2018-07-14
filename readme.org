@@ -13,11 +13,20 @@ I'm also using Flask to trigger the PDF generation via http to integrate it onto
 
 ** Usage 
 
-1. Run the Flask app 
+- Run the Flask app 
 #+BEGIN_SRC sh
 python app/main.py
 #+END_SRC
-2. Go to [[http://localhost:5000/]] to trigger PDF generation.
-3. Alternatively you can go to [[http://localhost:5000/test]] to render the html without generating the PDF. 
- 
+- Go to [[http://localhost:5000/]] to trigger PDF generation.
+- Alternatively you can go to [[http://localhost:5000/test]] to render the html without generating the PDF.
+
+
+
+
+
+** Example
+
+#+CAPTION: example
+#+NAME:   fig:example
+[[./example.pdf]]
 

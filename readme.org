@@ -1,1 +1,17 @@
-Meal Plan Template
+* Meal Plan Template
+
+*Goal:* Generate a PDF from data describing a meal plan. The PDF layout is defined using CSS and rendered with PDFKit. 
+
+I'm also using Flask to trigger the PDF generation via http to integrate it onto my website.
+
+
+** Usage 
+
+1. Run the Flask app 
+#+BEGIN_SRC sh
+python app/main.py
+#+END_SRC
+2. Go to [[http://localhost:5000/]] to trigger PDF generation.
+3. Alternatively you can go to [[http://localhost:5000/test]] to render the html without generating the PDF. 
+ 
+

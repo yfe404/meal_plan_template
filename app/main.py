@@ -25,11 +25,17 @@ data = {
     ], "type": ['lunch', 'dinner']
 }
 
+
 @app.route('/')
 def index():
-    
+
+    options = {
+        'footer-html': 'http://localhost:5000/footer',
+        'header-html': 'http://localhost:5000/header'
+    }
+
     rendered = render_template('pdf_template.html', data=data)
-    pdf = pdfkit.from_string(rendered, False)
+    pdf = pdfkit.from_string(rendered, False, options=options)
 
     response = make_response(pdf) 
     
@@ -37,6 +43,14 @@ def index():
     response.headers['Content-Disposition'] = 'inline' ## open the pdf in the browser VS attachement try to dl it.
     
     return response
+
+@app.route('/footer')
+def footer():
+    return render_template('pdf_footer.html')
+
+@app.route('/header')
+def header():
+    return render_template('pdf_header.html')
 
 
 @app.route('/test')

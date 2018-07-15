@@ -1,3 +1,60 @@
-<!doctype html>
+{% extends 'pdf_base.html' %}
 
-Hello Cover
+
+{% block body %}
+    <img  src="{{ url_for('static', filename='img/nutrimium-logo.png', _external=True) }}" alt="" width="100%"/>
+
+
+    <div class="container">
+	<h1 class="text-center text-uppercase">{{number_of_days}} day meal plan</h1>
+    </div>
+
+
+    <div class="container">
+      <h2 class="text-center text-uppercase">{{number_of_calories}} Calories</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-3">
+	<a href="#" class="thumbnail">
+	  <img src="{{ url_for('static', filename='img/black-background-cactuses-cake-698854.jpg', _external=True) }}" alt="...">
+	</a>
+      </div>
+            <div class="col-xs-3">
+	<a href="#" class="thumbnail">
+	  <img src="{{ url_for('static', filename='img/berries-blackberries-breakfast-698857.jpg', _external=True) }}" alt="...">
+	</a>
+      </div>
+      <div class="col-xs-3">
+	<a href="#" class="thumbnail">
+	  <img src="{{ url_for('static', filename='img/bowl-ceramic-chopsticks-923182.jpg', _external=True) }}" alt="...">
+	</a>
+      </div>
+      <div class="col-xs-3">
+	<a href="#" class="thumbnail">
+	  <img src="{{ url_for('static', filename='img/bowl-breakfast-caffeine-698859.jpg', _external=True) }}" alt="...">
+	</a>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-xs-6">
+	<a href="#" class="thumbnail">
+	  <img src="{{ url_for('static', filename='img/antipasti-delicious-dinner-5876.jpg', _external=True) }}" alt="...">
+	</a>
+      </div>
+            <div class="col-xs-6">
+	<a href="#" class="thumbnail">
+	  <img src="{{ url_for('static', filename='img/buffet-chicken-cooking-5938.jpg', _external=True) }}" alt="...">
+	</a>
+      </div>
+
+    </div>
+
+    <div class="container">
+      <p class="text-center">nutrimium.com</p>
+    </div>
+
+{% endblock %}
+    

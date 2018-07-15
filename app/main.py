@@ -34,7 +34,7 @@ def index():
         'header-html': 'http://localhost:5000/header'
     }
 
-    cover = './templates/pdf_cover.html'
+    cover = 'http://localhost:5000/cover'
 
     rendered = render_template('pdf_template.html', data=data)
     pdf = pdfkit.from_string(rendered, False, options=options, cover=cover)
@@ -45,6 +45,10 @@ def index():
     response.headers['Content-Disposition'] = 'inline' ## open the pdf in the browser VS attachement try to dl it.
     
     return response
+
+@app.route('/cover')
+def cover():
+    return render_template('pdf_cover.html')
 
 @app.route('/footer')
 def footer():

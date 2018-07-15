@@ -9,14 +9,14 @@ data = {
     "carbohydrates": 39,
     "fats": 19,
     "ingredients": [
-        {"name": "Oeuf entier", "quantity": 3, "unit": "unit"},
+        {"name": "Oeuf(s) entier(s)", "quantity": 3, "unit": "unit"},
         {"name": "Blanc de poulet", "quantity": 80, "unit": "g"},
         {"name": "Poivron", "quantity": 80, "unit": "g"},
         {"name": "Champignons de Paris", "quantity": 80, "unit": "g"},
         {"name": "Riz complet", "quantity": 50, "unit": "g"},
     ],
     "name": "Omelette", "steps": [
-        "Dans un grand recipient: fouettez le oeufs. Vous pouvez ajouter du poivres et des épices selon vos préferences.",
+        "Dans un grand recipient: fouettez le oeufs. Vous pouvez ajouter du poivre et des épices selon vos préferences.",
         "Dans un plat, coupez le blanc de poulet et les poivrons en dés.",
         "Versez dans une poêle chaude votre mélange d'oeufs fouettés.",
         "Ajoutez-y le poulet et les poivrons.",
@@ -34,8 +34,10 @@ def index():
         'header-html': 'http://localhost:5000/header'
     }
 
+    cover = './templates/pdf_cover.html'
+
     rendered = render_template('pdf_template.html', data=data)
-    pdf = pdfkit.from_string(rendered, False, options=options)
+    pdf = pdfkit.from_string(rendered, False, options=options, cover=cover)
 
     response = make_response(pdf) 
     

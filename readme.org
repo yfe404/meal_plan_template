@@ -7,7 +7,7 @@ I'm also using Flask to trigger the PDF generation via http to integrate it onto
 
 #+CAPTION: salad
 #+NAME:   fig:salad
-[[./doc/img/salad.jpg]]
+[[./doc/img/meme.jpg]]
 
 
 

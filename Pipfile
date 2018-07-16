@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 pdfkit = "*"
 flask = "*"
+pdfrw = "*"
 
 [dev-packages]
 

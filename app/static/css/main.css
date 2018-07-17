@@ -1,0 +1,6 @@
+
+/* Removes bullet on unordered list items */
+ul {
+    list-style-type: none;
+} 
+

@@ -1,0 +1,81 @@
+{% extends 'pdf_base.html' %}
+
+{% block title %}Nutrimium Meal Plan{% endblock %}
+
+{% block body %}
+
+<br/>
+
+    <main role="main">
+
+      <div class="container">
+	<h1>Jour {{day}} | {{meal_type}} <small class='text-uppercase'> - {{ data.name }}</small></h1>
+
+	<div class="row">
+	  <div class="col-xs-4">
+	    <img  src="{{ url_for('static', filename='img/how-many-grams-of-protein-should-you-eat-meme.jpg', _external=True) }}" alt="" width="100%" class="img-rounded"/>
+	  </div>
+	  <div class="col-xs-8">
+	    <h3>Ingredients</h3>
+	    <div class="row">
+	      <div class="col-xs-4">
+		<ul>
+		  {% for ingredient in data['ingredients'] %}
+		  {% if loop.index is not divisibleby 2 %}
+		  <li>{{ ingredient.quantity }}{% if ingredient.unit in ['g', 'ml', 'càs'] %}{{ ingredient.unit}} {% endif %} {{ ingredient.name }}</li>
+		  {% endif %}
+		  {% endfor %}
+		</ul>
+	      </div>
+	      <div class="col-xs-4">
+		<ul>
+		  {% for ingredient in data['ingredients'] %}
+		  {% if loop.index is divisibleby 2 %}
+		  <li>{{ ingredient.quantity }}{% if ingredient.unit in ['g', 'ml', 'càs'] %}{{ ingredient.unit}} {% endif %} {{ ingredient.name }}</li>
+		  {% endif %}
+		  {% endfor %}
+		</ul>
+	      </div>
+	    </div>
+	  </div>
+
+	</div>
+	<div class="row">
+	  <div class="col-xs-4">
+
+	    <h3>Nutrition</h3>
+	    <table class="table">
+	      <tbody>
+		<tr>
+		  <td>Calories</td>
+		  <td>{{ data['calories'] }} kcal</td>
+		<tr>
+		<tr>
+		  <td>Proteines</td>
+		  <td>{{ data['proteins'] }}g</td>
+		<tr>
+		<tr>
+		  <td>Glucides</td>
+		  <td>{{ data['carbohydrates'] }}g</td>
+		<tr>
+		<tr>
+		  <td>Lipides</td>
+		  <td>{{ data['fats'] }}g</td>
+		<tr>
+	      </tbody>
+	    </table>
+	  </div>
+	  <div class="col-xs-8">
+	    <h3>Preparation</h3> 
+
+	    <ol>
+	      {% for step in data['steps'] %}
+	      <li>{{ step }}</li>
+	      {% endfor %}
+	    </ol>
+	  </div>
+	</div>
+
+    </main>
+
+{% endblock %}

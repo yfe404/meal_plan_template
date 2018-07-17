@@ -21,7 +21,19 @@ python app/main.py
 - Alternatively you can go to [[http://localhost:5000/test]] to render the html without generating the PDF.
 
 
+** Output 
 
+#+CAPTION: Cover
+#+NAME:   fig:cover
+[[./example/cover.jpg]]
+
+#+CAPTION: Shopping list
+#+NAME:   fig:shopping-list
+[[./example/shopping-list.png]]
+
+#+CAPTION: Meal
+#+NAME:   fig:meal
+[[./example/meal.png]]
 
 
 ** Example

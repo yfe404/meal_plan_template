@@ -1,0 +1,24 @@
+{% extends 'pdf_base.html' %}
+
+{% block body %}
+
+<br>
+
+<h1>Liste de courses</h1>
+
+
+<ul>
+  {% for key, value in basket.items() %}
+  <li>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input">
+      <label class="custom-control-label">
+	{{ value[0]|int() }}{% if value[1] in ['g', 'ml'] %}{{ value[1] }} {% endif %} {{ key }}
+      </label>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
+

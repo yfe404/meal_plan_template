@@ -6,19 +6,39 @@
 
 <h1 class="shop-list-title">Liste de courses</h1>
 
+<div class="container-fluid">
+  <div class="row">
 
-<ul class="shoplist">
-  {% for key, value in basket.items() %}
-  <li>
-    <div class="custom-control custom-checkbox shop-item">
-      <input type="checkbox" class="custom-control-input">
-      <label class="custom-control-label shop-item-label">
-	{% if value[1] not in ['càs', 'càc'] %}{{ value[0]|int() }}{% endif %}{% if value[1] in ['g', 'ml'] %}{{ value[1] }} {% endif %} {{ key }}
-      </label>
+    <div class="col-xs-6">
+      <ul class="shoplist">
+	{% for key, value in basket[0].items() %}
+	<li>
+	  <div class="custom-control custom-checkbox shop-item">
+	    <input type="checkbox" class="custom-control-input">
+	    <label class="custom-control-label shop-item-label">
+	      {% if value[1] not in ['càs', 'càc'] %}{{ value[0]|int() }}{% endif %}{% if value[1] in ['g', 'ml'] %}{{ value[1] }} {% endif %} {{ key }}
+	    </label>
+	  </div>
+	</li>
+	{% endfor %}
+      </ul>
     </div>
-  </li>
-  {% endfor %}
-</ul>
+    <div class="col-xs-6">
+      <ul class="shoplist">
+	{% for key, value in basket[1].items() %}
+	<li>
+	  <div class="custom-control custom-checkbox shop-item">
+	    <input type="checkbox" class="custom-control-input">
+	    <label class="custom-control-label shop-item-label">
+	      {% if value[1] not in ['càs', 'càc'] %}{{ value[0]|int() }}{% endif %}{% if value[1] in ['g', 'ml'] %}{{ value[1] }} {% endif %} {{ key }}
+	    </label>
+	  </div>
+	</li>
+	{% endfor %}
+      </ul>
+    </div>
 
+  </div>
+</div>
 {% endblock %}
 

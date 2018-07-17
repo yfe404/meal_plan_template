@@ -13,7 +13,7 @@
     <div class="custom-control custom-checkbox">
       <input type="checkbox" class="custom-control-input">
       <label class="custom-control-label">
-	{{ value[0]|int() }}{% if value[1] in ['g', 'ml'] %}{{ value[1] }} {% endif %} {{ key }}
+	{% if value[1] not in ['càs', 'càc'] %}{{ value[0]|int() }}{% endif %}{% if value[1] in ['g', 'ml'] %}{{ value[1] }} {% endif %} {{ key }}
       </label>
     </div>
   </li>

@@ -4,6 +4,43 @@
     list-style-type: none;
 } 
 
+.cover-header-1, .cover-header-2 {
+    font-family: 'Montserrat',  'sans-serif';
+    font-weight: bold;
+    color: #356859;
+}
+
+.social-network {
+    font-family: 'Lekton', 'sans-serif';
+    font-size: x-large;
+}
+
+.social-network>ul>li>a {
+    color: #356859;
+}
+
+.nutrition-value-item, .nutrition-value-label {
+    font-family: 'Lekton', 'sans-serif';
+    color: #356859;
+}
+
+.nutrition-value-item {
+    font-weight:700;
+}
+
+.nutrition-value-label {
+    font-weight:400;
+}
+
+.header-title {
+    font-family: 'Montserrat',  'sans-serif';
+    font-weight: 500;
+    color: #356859;
+}
+
+.header-title>small {
+    font-weight: 400;
+}
 
 .recipe-name, .shop-list-title {
     font-family: 'Montserrat',  'sans-serif';
@@ -12,6 +49,10 @@
     text-align: center;
     line-height: 1.5;
     margin-bottom: 30px;
+}
+
+.recipe-name>small {
+    color: #356859;
 }
 
 .directions-title, .ingredients-title, .nutrition-title {

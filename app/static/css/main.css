@@ -1,6 +1,52 @@
 
 /* Removes bullet on unordered list items */
-ul {
+.shoplist {
     list-style-type: none;
 } 
 
+.recipe-name {
+    font-family: 'Montserrat',  'sans-serif';
+    font-weight: bold;
+    color: #FD5523;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.directions-title, .ingredients-title, .nutrition-title {
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+.ingredient-item {
+    font-family: 'Montserrat', 'sans-serif';
+    color: #356859;
+    margin: 20px auto 20px auto;
+    font-size: medium;
+    font-weight: 400;
+}
+
+.shop-item {
+    font-family: 'Montserrat', 'sans-serif';
+    color: #356859;
+    margin: 20px auto 20px auto;
+    font-size: medium;
+    width: 100%;
+    font-weight: 400;
+}
+
+.shop-item-label {
+    margin-left: 15px;
+    margin-bottom: 0px;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+    margin-top: 0px;
+}
+
+.direction-step {
+    font-family: 'Lekton', 'sans-serif';
+    font-size: x-large;
+    font-weight:400;
+    color: #37966F;
+}

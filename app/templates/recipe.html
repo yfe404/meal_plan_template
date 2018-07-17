@@ -9,38 +9,38 @@
     <main role="main">
 
       <div class="container">
-	<h1 class="text-uppercase recipe-name">{{ data.name }} <small > - Jour {{day}} | {{meal_type}}</small></h1>
+	<h1 class="text-uppercase recipe-name">{{ data.name }} <small>  Jour {{day}} | {{meal_type}}</small></h1>
 
 	<div class="row">
-	  <div class="col-xs-4">
+	  <div class="col-xs-3">
 	    <!--	    <img  src="{{ url_for('static', filename='img/how-many-grams-of-protein-should-you-eat-meme.jpg', _external=True) }}" alt="" width="100%" class="img-rounded"/> -->
 	    <h3 class="nutrition-title">Nutrition</h3>
 	    <table class="table">
 	      <tbody>
 		<tr>
-		  <td>Calories</td>
-		  <td>{{ data['calories'] }} kcal</td>
+		  <td class="nutrition-value-label">Calories</td>
+		  <td class="nutrition-value-item">{{ data['calories'] }} kcal</td>
 		<tr>
 		<tr>
-		  <td>Proteines</td>
-		  <td>{{ data['proteins'] }}g</td>
+		  <td class="nutrition-value-label">Proteines</td>
+		  <td class="nutrition-value-item">{{ data['proteins'] }}g</td>
 		<tr>
 		<tr>
-		  <td>Glucides</td>
-		  <td>{{ data['carbohydrates'] }}g</td>
+		  <td class="nutrition-value-label">Glucides</td>
+		  <td class="nutrition-value-item">{{ data['carbohydrates'] }}g</td>
 		<tr>
 		<tr>
-		  <td>Lipides</td>
-		  <td>{{ data['fats'] }}g</td>
+		  <td class="nutrition-value-label">Lipides</td>
+		  <td class="nutrition-value-item">{{ data['fats'] }}g</td>
 		<tr>
 	      </tbody>
 	    </table>
 	  </div>
 	  
-	  <div class="col-xs-8">
+	  <div class="col-xs-9">
 	    <h3 class="ingredients-title">Ingredients</h3>
 	    <div class="row">
-	      <div class="col-xs-4">
+	      <div class="col-xs-5">
 		<ul>
 		  {% for ingredient in data['ingredients'] %}
 		  {% if loop.index is not divisibleby 2 %}

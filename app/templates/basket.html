@@ -7,12 +7,12 @@
 <h1>Liste de courses</h1>
 
 
-<ul>
+<ul class="shoplist">
   {% for key, value in basket.items() %}
   <li>
-    <div class="custom-control custom-checkbox">
+    <div class="custom-control custom-checkbox shop-item">
       <input type="checkbox" class="custom-control-input">
-      <label class="custom-control-label">
+      <label class="custom-control-label shop-item-label">
 	{% if value[1] not in ['càs', 'càc'] %}{{ value[0]|int() }}{% endif %}{% if value[1] in ['g', 'ml'] %}{{ value[1] }} {% endif %} {{ key }}
       </label>
     </div>

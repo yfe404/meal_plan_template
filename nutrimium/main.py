@@ -10,7 +10,7 @@ def create_app(config_filename):
 
 #    from yourapplication.views.admin import admin
 #    from yourapplication.views.frontend import frontend
-    
+
     app.register_blueprint(pdf)
 #    app.register_blueprint(frontend)
 

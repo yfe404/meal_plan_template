@@ -1,30 +1,10 @@
-from flask import Blueprint, render_template, abort, make_response, request
+from flask import Blueprint, render_template, abort, make_response, request, session
 from jinja2 import TemplateNotFound
 import pdfkit
+import json
 
 from lib.meals import compute_number_of_days, compute_total_calories, compute_basket
 from lib.recipes import RecipeService
-
-
-data2 =  [[
-    {
-        "calories": 400,
-        "name": "Fromage blanc fruité"
-    },
-    {
-        "calories": 450,
-        "name": "Omelette"
-    },
-    {
-        "calories": 500,
-        "name": "Fromage blanc fruité 2"
-    },
-    {
-        "calories": 450,
-        "name": "Salade fraîche"
-    }    
-]]
-    
 
 meal_types = ['Matin', 'Midi', 'Collation', 'Soir']
 
@@ -45,7 +25,9 @@ def show():
 @pdf.route('/generate', methods=['POST'])
 def generate():
     meal_plan = request.json
-    print(meal_plan)
+
+    session['meal_plan'] = meal_plan
+    print(session.get('meal_plan'))
     
     options = {
         'footer-html': 'http://localhost:5000/pdf/footer',
@@ -53,15 +35,15 @@ def generate():
     }
 
     cover = 'http://localhost:5000/pdf/cover?number_of_days={0}&number_of_calories={1}'.format(
-        compute_number_of_days(data2),
-        compute_total_calories(data2)
+        compute_number_of_days(meal_plan),
+        compute_total_calories(meal_plan)
     )
 
     urls = [
-        'http://localhost:5000/pdf/basket'
+    'http://localhost:5000/pdf/basket/{0}'.format(json.dumps(meal_plan))
     ]
 
-    for idx, day in enumerate(data2):
+    for idx, day in enumerate(meal_plan):
         idx_day = idx + 1 ## 1-indexes for days (more human readable)
         for idx_meal, recipe in enumerate(day):
             urls.append('http://localhost:5000/pdf/recipe/{0}/{1}/{2}/{3}'.format(recipe['name'], recipe['calories'], idx_day, meal_types[idx_meal] ))
@@ -101,9 +83,14 @@ def recipe(name, calories, day, meal_type):
     return render_template('recipe.html', data=recipe, day=day, meal_type=meal_type)
 
 
-@pdf.route('/basket')
-def basket():
-    meal_plan = data2
+@pdf.route('/basket/<meal_plan>')
+def basket(meal_plan):
+
+    meal_plan = json.loads(meal_plan)
+    print("MEAL PLAN: {}".format(meal_plan))
+
+    assert meal_plan is not None
+    
     basket = compute_basket(meal_plan)
 
     return render_template('basket.html', basket=basket)

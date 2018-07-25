@@ -15,7 +15,8 @@ I'm also using Flask to trigger the PDF generation via http to integrate it onto
 
 - Run the Flask app 
 #+BEGIN_SRC sh
-python app/main.py
+export FLASK_APP="nutrimium.main:create_app('config.txt')"
+flask run
 #+END_SRC
 - Go to [[http://localhost:5000/]] to trigger PDF generation.
 - Alternatively you can go to [[http://localhost:5000/test]] to render the html without generating the PDF.

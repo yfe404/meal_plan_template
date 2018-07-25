@@ -1,12 +1,16 @@
 from .recipes import RecipeService
 
 def compute_total_calories(meal_plan):
-    total = 0
-    for meals_for_day in meal_plan:
+    totals = [0 for _ in meal_plan]
+    for day_idx, meals_for_day in enumerate(meal_plan):
         for recipe in meals_for_day:
-            total += recipe['calories']
+            totals[day_idx] += recipe['calories']
 
-    return total
+    # check that all day has the same amount of calories
+    for total in totals:
+        assert total == totals[0]
+
+    return totals[0]
     
 def compute_number_of_days(meal_plan):
     return len(meal_plan)

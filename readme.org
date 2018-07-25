@@ -18,8 +18,33 @@ I'm also using Flask to trigger the PDF generation via http to integrate it onto
 export FLASK_APP="nutrimium.main:create_app('config.txt')"
 flask run
 #+END_SRC
-- Go to [[http://localhost:5000/]] to trigger PDF generation.
-- Alternatively you can go to [[http://localhost:5000/test]] to render the html without generating the PDF.
+
+#+BEGIN_SRC sh
+curl -H "Content-Type: application/json"  -X POST -d @test.json  http://localhost:5000/pdf/generate  > out.pdf
+#+END_SRC
+
+Content of =test.json= must be as follow: 
+
+#+BEGIN_SRC json
+[[
+    {
+        "calories": 400,
+        "name": "Fromage blanc fruité"
+    },
+    {
+        "calories": 450,
+        "name": "Omelette"
+    },
+    {
+        "calories": 500,
+        "name": "Fromage blanc fruité 2"
+    },
+    {
+        "calories": 450,
+        "name": "Salade fraîche"
+    }
+]]
+#+END_SRC
 
 
 ** Output 

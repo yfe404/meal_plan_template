@@ -2,7 +2,7 @@ from flask import Blueprint, render_template, abort, make_response, request
 from jinja2 import TemplateNotFound
 import pdfkit
 
-from lib.meals import compute_number_of_days, compute_total_calories
+from lib.meals import compute_number_of_days, compute_total_calories, compute_basket
 from lib.recipes import RecipeService
 
 
@@ -42,9 +42,11 @@ def show():
 
 
 
-@pdf.route('/generate')
+@pdf.route('/generate', methods=['POST'])
 def generate():
-
+    meal_plan = request.json
+    print(meal_plan)
+    
     options = {
         'footer-html': 'http://localhost:5000/pdf/footer',
         'header-html': 'http://localhost:5000/pdf/header'
@@ -102,28 +104,6 @@ def recipe(name, calories, day, meal_type):
 @pdf.route('/basket')
 def basket():
     meal_plan = data2
-    recipe_service = RecipeService()
-    
-
-    
-    basket = [dict(), dict()] # 2 pages
-    pos = 0 # evenly spread the ingredients on the 2 pages 
-    for meals_for_day in meal_plan:
-        for recipe in meals_for_day:
-            recipe = recipe_service.get_recipe(recipe['name'], recipe['calories'])
-            for ingredient in recipe['ingredients']:
-                ingredient_name = ingredient['name']
-                ingredient_quantity = ingredient['quantity']
-                ingredient_unit = ingredient['unit']
-                if ingredient_name in basket[0].keys():
-                    basket[0][ingredient_name][0] += ingredient_quantity
-                    pos = 1
-                elif ingredient_name in basket[1].keys():
-                    basket[1][ingredient_name][0] += ingredient_quantity
-                    pos = 0
-                else:
-                    basket[pos][ingredient_name] = [ingredient_quantity, ingredient_unit]
-
-    print (basket)
+    basket = compute_basket(meal_plan)
 
     return render_template('basket.html', basket=basket)

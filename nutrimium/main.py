@@ -16,5 +16,3 @@ def create_app(config_filename):
 
 
     return app
-                      
-                    

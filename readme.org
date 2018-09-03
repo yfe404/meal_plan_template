@@ -15,8 +15,7 @@ I'm also using Flask to trigger the PDF generation via http to integrate it onto
 
 - Run the Flask app 
 #+BEGIN_SRC sh
-export FLASK_APP="nutrimium.main:create_app('config.txt')"
-flask run
+gunicorn -w 16 -b 127.0.0.1:5000 "nutrimium.main:create_app('config.txt')"
 #+END_SRC
 
 #+BEGIN_SRC sh

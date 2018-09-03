@@ -6,7 +6,15 @@ import json
 from lib.meals import compute_number_of_days, compute_total_calories, compute_basket
 from lib.recipes import RecipeService
 
-meal_types = ['Matin', 'Midi', 'Collation', 'Soir']
+meal_types = [
+    ['Matin', 'Pre-workout', 'Post-Workout', 'Midi', 'Soir'],
+    ['Matin', 'Pre-workout', 'Post-Workout', 'Midi', 'Soir'],
+    ['Matin', 'Midi', 'Collation', 'Soir'],
+    ['Matin', 'Pre-workout', 'Post-Workout', 'Midi', 'Soir'],
+    ['Matin', 'Pre-workout', 'Post-Workout', 'Midi', 'Soir'],
+    ['Matin', 'Midi', 'Collation', 'Soir'],
+    ['Matin', 'Midi', 'Collation', 'Soir']
+]
 
 
 pdf = Blueprint('pdf', __name__,
@@ -28,6 +36,8 @@ def generate():
 
     session['meal_plan'] = meal_plan
     print(session.get('meal_plan'))
+
+    print(meal_types[0][0])
     
     options = {
         'footer-html': 'http://localhost:5000/pdf/footer',
@@ -45,8 +55,10 @@ def generate():
 
     for idx, day in enumerate(meal_plan):
         idx_day = idx + 1 ## 1-indexes for days (more human readable)
+        print(idx_day)
         for idx_meal, recipe in enumerate(day):
-            urls.append('http://localhost:5000/pdf/recipe/{0}/{1}/{2}/{3}'.format(recipe['name'], recipe['calories'], idx_day, meal_types[idx_meal] ))
+            print(meal_types[idx][idx_meal])
+            urls.append('http://localhost:5000/pdf/recipe/{0}/{1}/{2}/{3}'.format(recipe['name'], recipe['calories'], idx_day, meal_types[idx][idx_meal] ))
 
     pdf = pdfkit.from_url(urls, False, options=options, cover=cover)
 

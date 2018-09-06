@@ -1234,6 +1234,196 @@ class RecipeService():
 ],
 "name": "Poulet lentilles", "steps": ["<RECIPE_STEPS>"], "type": "<RECIPE_TYPE>"},
 
+{"calories": 350,
+"proteins": 32,
+"carbohydrates": 20,
+"fats": 18,
+"ingredients": [
+{"name": "Lentilles vertes", "quantity": 20, "unit": "g"},
+{"name": "Filet de poulet", "quantity": 120, "unit": "g"},
+{"name": "Endives", "quantity": 100, "unit": "g"},
+{"name": "Huile d'olive", "quantity": 1, "unit": "càs"},
+{"name": "Vinaigre balsamique", "quantity": 1, "unit": "càs"},
+{"name": "Moutarde", "quantity": 1, "unit": "càs"},
+],
+"name": "Poulet lentilles", "steps": ["<RECIPE_STEPS>"], "type": "<RECIPE_TYPE>"}
+
+
+{"calories": 400,
+"proteins": 34,
+"carbohydrates": 25,
+"fats": 18,
+"ingredients": [
+{"name": "Lentilles vertes", "quantity": 30, "unit": "g"},
+{"name": "Filet de poulet", "quantity": 120, "unit": "g"},
+{"name": "Endives", "quantity": 100, "unit": "g"},
+{"name": "Huile d'olive", "quantity": 1, "unit": "càs"},
+{"name": "Vinaigre balsamique", "quantity": 1, "unit": "g"},
+{"name": "Moutarde", "quantity": 1, "unit": "g"},
+],
+"name": "Poulet lentilles", "steps": ["<RECIPE_STEPS>"], "type": "<RECIPE_TYPE>"},
+
+
+{"calories": 450,
+"proteins": 36,
+"carbohydrates": 28,
+"fats": 23,
+"ingredients": [
+{"name": "Lentilles vertes", "quantity": 30, "unit": "g"},
+{"name": "Filet de poulet", "quantity": 120, "unit": "g"},
+{"name": "Noix", "quantity": 10, "unit": "g"},
+{"name": "Endives", "quantity": 100, "unit": "g"},
+{"name": "Huile d'olive", "quantity": 1, "unit": "càs"},
+{"name": "Vinaigre balsamique", "quantity": 1, "unit": "càs"},
+{"name": "Moutarde", "quantity": 1, "unit": "càs"},
+],
+"name": "Poulet lentilles", "steps": ["<RECIPE_STEPS>"], "type": "<RECIPE_TYPE>"},
+
+
+{"calories": 500,
+"proteins": 38,
+"carbohydrates": 33,
+"fats": 23,
+"ingredients": [
+{"name": "Lentilles vertes", "quantity": 40, "unit": "g"},
+{"name": "Filet de poulet", "quantity": 120, "unit": "g"},
+{"name": "Noix", "quantity": 10, "unit": "g"},
+{"name": "Endives", "quantity": 100, "unit": "g"},
+{"name": "Huile d'olive", "quantity": 1, "unit": "càs"},
+{"name": "Vinaigre balsamique", "quantity": 1, "unit": "càs"},
+{"name": "Moutarde", "quantity": 1, "unit": "càs"},
+],
+"name": "Poulet lentilles", "steps": ["<RECIPE_STEPS>"], "type": "<RECIPE_TYPE>"},
+
+
+{"calories": 550,
+"proteins": 40,
+"carbohydrates": 35,
+"fats": 28,
+"ingredients": [
+{"name": "Lentilles vertes", "quantity": 40, "unit": "g"},
+{"name": "Filet de poulet", "quantity": 120, "unit": "g"},
+{"name": "Noix", "quantity": 20, "unit": "g"},
+{"name": "Endives", "quantity": 100, "unit": "g"},
+{"name": "Huile d'olive", "quantity": 1, "unit": "càs"},
+{"name": "Vinaigre balsamique", "quantity": 1, "unit": "càs"},
+{"name": "Moutarde", "quantity": 1, "unit": "càs"},
+],
+"name": "Poulet lentilles", "steps": ["<RECIPE_STEPS>"], "type": "<RECIPE_TYPE>"},
+
+
+{"calories": 600,
+"proteins": 44,
+"carbohydrates": 43,
+"fats": 28,
+"ingredients": [
+{"name": "Lentilles vertes", "quantity": 55, "unit": "g"},
+{"name": "Filet de poulet", "quantity": 120, "unit": "g"},
+{"name": "Noix", "quantity": 20, "unit": "g"},
+{"name": "Endives", "quantity": 100, "unit": "g"},
+{"name": "Huile d'olive", "quantity": 1, "unit": "càs"},
+{"name": "Vinaigre balsamique", "quantity": 1, "unit": "càs"},
+{"name": "Moutarde", "quantity": 1, "unit": "càs"},
+],
+"name": "Poulet lentilles", "steps": ["<RECIPE_STEPS>"], "type": "<RECIPE_TYPE>"},
+
+
+{"calories": 650,
+"proteins": 46,
+"carbohydrates": 46,
+"fats": 31,
+"ingredients": [
+{"name": "Lentilles vertes", "quantity": 60, "unit": "g"},
+{"name": "Filet de poulet", "quantity": 120, "unit": "g"},
+{"name": "Noix", "quantity": 25, "unit": "g"},
+{"name": "Endives", "quantity": 100, "unit": "g"},
+{"name": "Huile d'olive", "quantity": 1, "unit": "càs"},
+{"name": "Vinaigre balsamique", "quantity": 1, "unit": "càs"},
+{"name": "Moutarde", "quantity": 1, "unit": "càs"},
+],
+"name": "Poulet lentilles", "steps": ["<RECIPE_STEPS>"], "type": "<RECIPE_TYPE>"},
+
+
+{"calories": 700,
+"proteins": 51,
+"carbohydrates": 57,
+"fats": 31,
+"ingredients": [
+{"name": "Lentilles vertes", "quantity": 80, "unit": "g"},
+{"name": "Filet de poulet", "quantity": 120, "unit": "g"},
+{"name": "Noix", "quantity": 25, "unit": "g"},
+{"name": "Endives", "quantity": 100, "unit": "g"},
+{"name": "Huile d'olive", "quantity": 1, "unit": "càs"},
+{"name": "Vinaigre balsamique", "quantity": 1, "unit": "càs"},
+{"name": "Moutarde", "quantity": 1, "unit": "càs"},
+],
+"name": "Poulet lentilles", "steps": ["<RECIPE_STEPS>"], "type": "<RECIPE_TYPE>"},
+
+
+{"calories": 750,
+"proteins": 45,
+"carbohydrates": 45,
+"fats": 43,
+"ingredients": [
+{"name": "Lentilles vertes", "quantity": 60, "unit": "g"},
+{"name": "Filet de poulet", "quantity": 120, "unit": "g"},
+{"name": "Noix", "quantity": 20, "unit": "g"},
+{"name": "Endives", "quantity": 100, "unit": "g"},
+{"name": "Huile d'olive", "quantity": 2, "unit": "càs"},
+{"name": "Vinaigre balsamique", "quantity": 1, "unit": "càs"},
+{"name": "Moutarde", "quantity": 1, "unit": "càs"},
+],
+"name": "Poulet lentilles", "steps": ["<RECIPE_STEPS>"], "type": "<RECIPE_TYPE>"},
+
+
+{"calories": 800,
+"proteins": 48,
+"carbohydrates": 52,
+"fats": 46,
+"ingredients": [
+{"name": "Lentilles vertes", "quantity": 70, "unit": "g"},
+{"name": "Filet de poulet", "quantity": 120, "unit": "g"},
+{"name": "Noix", "quantity": 25, "unit": "g"},
+{"name": "Endives", "quantity": 100, "unit": "g"},
+{"name": "Huile d'olive", "quantity": 2, "unit": "càs"},
+{"name": "Vinaigre balsamique", "quantity": 1, "unit": "càs"},
+{"name": "Moutarde", "quantity": 1, "unit": "càs"},
+],
+"name": "Poulet lentilles", "steps": ["<RECIPE_STEPS>"], "type": "<RECIPE_TYPE>"},
+
+
+
+{"calories": 850,
+"proteins": 51,
+"carbohydrates": 57,
+"fats": 46,
+"ingredients": [
+{"name": "Lentilles vertes", "quantity": 80, "unit": "g"},
+{"name": "Filet de poulet", "quantity": 120, "unit": "g"},
+{"name": "Noix", "quantity": 25, "unit": "g"},
+{"name": "Endives", "quantity": 100, "unit": "g"},
+{"name": "Huile d'olive", "quantity": 2, "unit": "càs"},
+{"name": "Vinaigre balsamique", "quantity": 1, "unit": "càs"},
+{"name": "Moutarde", "quantity": 1, "unit": "càs"},
+],
+"name": "Poulet lentilles", "steps": ["<RECIPE_STEPS>"], "type": "<RECIPE_TYPE>"},
+
+
+
+{"calories": 900,
+"proteins": 56,
+"carbohydrates": 67,
+"fats": 46,
+"ingredients": [
+{"name": "Lentilles vertes", "quantity": 100, "unit": "g"},
+{"name": "Filet de poulet", "quantity": 120, "unit": "g"},
+{"name": "Noix", "quantity": 25, "unit": "g"},
+{"name": "Endives", "quantity": 100, "unit": "g"},
+{"name": "Huile d'olive", "quantity": 2, "unit": "càs"},
+{"name": "Vinaigre balsamique", "quantity": 1, "unit": "càs"},
+{"name": "Moutarde", "quantity": 1, "unit": "càs"},
+],
+"name": "Poulet lentilles", "steps": ["<RECIPE_STEPS>"], "type": "<RECIPE_TYPE>"},
 
 
 

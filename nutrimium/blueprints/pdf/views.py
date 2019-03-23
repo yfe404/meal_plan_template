@@ -7,13 +7,7 @@ from lib.meals import compute_number_of_days, compute_total_calories, compute_ba
 from lib.recipes import RecipeService
 
 meal_types = [
-    ['Matin', 'Pre-workout', 'Post-Workout', 'Midi', 'Soir'],
-    ['Matin', 'Pre-workout', 'Post-Workout', 'Midi', 'Soir'],
     ['Matin', 'Midi', 'Collation', 'Soir'],
-    ['Matin', 'Pre-workout', 'Post-Workout', 'Midi', 'Soir'],
-    ['Matin', 'Pre-workout', 'Post-Workout', 'Midi', 'Soir'],
-    ['Matin', 'Midi', 'Collation', 'Soir'],
-    ['Matin', 'Midi', 'Collation', 'Soir']
 ]
 
 
@@ -104,5 +98,6 @@ def basket(meal_plan):
     assert meal_plan is not None
     
     basket = compute_basket(meal_plan)
+    print (basket)
 
     return render_template('basket.html', basket=basket)

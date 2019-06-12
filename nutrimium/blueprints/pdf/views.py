@@ -8,6 +8,12 @@ from lib.recipes import RecipeService
 
 meal_types = [
     ['Matin', 'Midi', 'Collation', 'Soir'],
+    ['Matin', 'Midi', 'Collation', 'Soir'],
+    ['Matin', 'Midi', 'Collation', 'Soir'],
+    ['Matin', 'Midi', 'Collation', 'Soir'],
+    ['Matin', 'Midi', 'Collation', 'Soir'],
+    ['Matin', 'Midi', 'Collation', 'Soir'],
+    ['Matin', 'Midi', 'Collation', 'Soir']
 ]
 
 
@@ -47,6 +53,7 @@ def generate():
     'http://localhost:5000/pdf/basket/{0}'.format(json.dumps(meal_plan))
     ]
 
+
     for idx, day in enumerate(meal_plan):
         idx_day = idx + 1 ## 1-indexes for days (more human readable)
         print(idx_day)
@@ -54,6 +61,9 @@ def generate():
             print(meal_types[idx][idx_meal])
             urls.append('http://localhost:5000/pdf/recipe/{0}/{1}/{2}/{3}'.format(recipe['name'], recipe['calories'], idx_day, meal_types[idx][idx_meal] ))
 
+
+    print (urls)
+            
     pdf = pdfkit.from_url(urls, False, options=options, cover=cover)
 
     response = make_response(pdf) 
